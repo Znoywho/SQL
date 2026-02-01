@@ -55,7 +55,7 @@ create table people(
 
 ### Decimal Nummbers
 #### Fixed-point number
-| numeric(Percision,scale) | decimal(Percision,scale) |
+| numeric(Precision,scale) | decimal(Precision,scale) |
 | -------------- | --------------- |
 | Precision: maximum digits left and right of number | Precision: maximum digits in right number |
 | scale: number of digits after point | Scale number of digits after point(default is zero) |
