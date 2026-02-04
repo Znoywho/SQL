@@ -68,6 +68,22 @@ create table people(
 | double Percision | 8 bytes | Floating-point |
 
 
+## Datetime and Datetime 
+
+|Data type| Storage size| Description| Range|
+|:---:|:---:|:---:|:---:|
+|timestamp| 8 bytes |Date and time| 4713 BC to 294276 AD|
+|date| 4 bytes |Date (no time) |4713 BC to 5874897 AD|
+|time| 8 bytes |Time (no date) |00:00:00 to 24:00:00|
+|interval| 16 bytes |Time interval |+/− 178,000,000 years|
+
+
+
+
+
+
+
+
 
 
 
