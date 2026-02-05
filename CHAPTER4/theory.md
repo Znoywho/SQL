@@ -146,6 +146,7 @@ select cast(char_columns as integer) from char_data_types
 > ```
 
 
-
+## Excercise 
+![Excercise](../assets/excercise.png)
 
 
