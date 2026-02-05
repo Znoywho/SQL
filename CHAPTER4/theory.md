@@ -18,8 +18,8 @@ with (FORMAT CSV, header, delimiter '|')
 
 ## Nummbers
 - Have two Types
-- Integer
-- Fixed-point and floating point
+    - Integer
+    - Fixed-point and floating point
 ### Integers
 #### Standard
 | datatypes | Storage data |
