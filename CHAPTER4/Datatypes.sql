@@ -52,11 +52,41 @@ VALUES
 select * from  number_data_types;
 
 
+create table date_time_types(
+	timestmao_column timestamp with time zone,
+	interval_column interval
+);
+
+insert into date_time_types
+values
+	('2022-12-31 01:00 EST', '2 days'),
+	('2022-12-31 01:00 -8','1 month'),
+	('2022-12-31 01:00 Australia/Melbourne','1 century'),
+	(now(),'1 week');
+
+select * from date_time_types;
+
+-- Using Micellaneous Types
+-- Transforming Values from One Type to
+-- Another with CAST
+select timestmao_column , cast(timestmao_column as varchar(10))
+from date_time_types;
 
 
+select numeric_column,
+	cast(numeric_column as integer),
+	cast(numeric_column as text)
+from number_data_types;
 
+select cast(char_columns as integer) from char_data_types
+-- Invalid input data 
+-- character cannot be converted to integer
 
-
+select timestmao_column, cast(timestmao_column as varchar(10))
+from date_time_types;
+-- Also with Notation
+select timestmao_column :: varchar(10)
+from date_time_types;
 
 
 

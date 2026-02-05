@@ -78,22 +78,72 @@ create table people(
 |interval| 16 bytes |Time interval |+/− 178,000,000 years|
 
 
+```sql
+create table date_time_types(
+	timestmao_column timestamp with time zone,
+	interval_column interval
+);
+```
+> [!NOTE]
+> ***time zone***: specifying the organization 
+
+```sql
+insert into date_time_types
+values
+	('2022-12-31 01:00 EST', '2 days'),
+	('2022-12-31 01:00 -8','1 month'),
+	('2022-12-31 01:00 Australia/Melbourne','1 century'),
+	(now(),'1 week');
+```
+
+> [OUTPUT]
+
+|timestmap_column| interval_column|
+|:---: |:---: |
+|"2022-12-31 13:00:00+07"	|"2 days"|
+|"2022-12-31 16:00:00+07"	|"1 mon"|
+|"2022-12-30 21:00:00+07"	|"100 years"|
+|"2026-02-05 19:35:52.212069+07"|"7 days"|
+
+## Using Miscellaneous Types 
+- Boolean
+- Geometric Types
+- Text search Types
+- Network address Types
+- universally unique identifier
+- Range
+- binary
+- XML
+
+## Transforming Values from One Type to Another with CAST
+```sql
+select timestmao_column , cast(timestmao_column as varchar(10))
+from date_time_types;
+select numeric_column,
+	cast(numeric_column as integer),
+	cast(numeric_column as text)
+from number_data_types;
+```
+> [!BUG]
+> the float out of bound of the integer
 
 
 
+```sql
+select cast(char_columns as integer) from char_data_types
+```
+> [!BUG]
+> invalid input syntax for type integer
 
+> [!NOTE]
+> letter cannot be converted to integer
 
-
-
-
-
-
-
-
-
-
-
-
+> [!TIP]
+> ***NOTATION***
+> ```sql 
+> select timestmao_column :: varchar(10)
+> from date_time_types;
+> ```
 
 
 
