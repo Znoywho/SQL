@@ -18,8 +18,8 @@ with (FORMAT CSV, header, delimiter '|')
 
 ## Nummbers
 - Have two Types
-        - Integer
-        - Fixed-point and floating point
+    - Integer
+    - Fixed-point and floating point
 ### Integers
 #### Standard
 | datatypes | Storage data |
@@ -135,7 +135,7 @@ create table date_time_types(
 );
 ```
 > [!NOTE]
-> ***Time Zone***  : specifying the organization 
+> ***time zone***  : specifying the organization 
 
 ```sql
 insert into date_time_types

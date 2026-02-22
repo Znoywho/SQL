@@ -18,8 +18,8 @@ CREATE TABLE TEACHER (
 |<=|Less than or equalt to|
 |BETWEEN|Within a range|
 |IN|Match one of a set of values|
-|LIKE|Match a pattern(Case sensitive add ***%*** signal in the last line)|
-|ILKIKE|Match a pattern(Case insensitive ***%***  signal in the last line)|
+|LIKE|Match a pattern(Case sensitive add ***%*** signal in the last line) |
+|ILKIKE|Match a pattern(Case insensitive ***%***  signal in the last line) |
 |NOT|Negates a condition|
 
 > [!NOTE]
