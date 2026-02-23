@@ -43,4 +43,12 @@ WITH (FORMAT CSV,HEADER);
 > `(town,supervisor,salary)` -> specifying which columns inserted
 
 
+*ADD CONDITION*
+
+```sql
+COPY supervisor_salaries (town, supervisor, salary)
+FROM '/mnt/datassd/CodeHub/SQL/CHAPTER5/supervisor_salaries.csv'
+WITH (FORMAT CSV, HEADER)
+WHERE town = 'Bigville';
+```
 
