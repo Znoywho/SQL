@@ -17,5 +17,30 @@ WITH (FORMAT CSV, HEADER);
 
 ## Importing a Subset of Columns with COPY
 
+```sql
+COPY supervisor_salaries
+FROM '/mnt/datassd/CodeHub/SQL/CHAPTER5/supervisor_salaries.csv'
+WITH (FORMAT CSV,HEADER);
+```
+> [!BUG]
+> ERROR:  invalid input syntax for type integer: "Anytown"
+> CONTEXT:  COPY supervisor_salaries, line 2, column id: "Anytown" 
+>
+> SQL state: 22P02
+
+> [!NOTE]
+> B/c is the auto-incrementing `id` but my own csv file begins with the text column `town`
+
+> [!FIX]
+> ```sql
+> COPY supervisor_salaries (town,supervisor,salary)
+> FROM '/mnt/datassd/CodeHub/SQL/CHAPTER5/supervisor_salaries.csv'
+> WITH (FORMAT CSV,HEADER);
+> ```
+
+
+> [!TIP]
+> `(town,supervisor,salary)` -> specifying which columns inserted
+
 
 
