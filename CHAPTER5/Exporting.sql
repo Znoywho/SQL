@@ -36,6 +36,35 @@ from us_counties_pop_est_2019
 order by internal_point_lon
 limit 5;
 
-im
+create table supervisor_salaries (
+	id integer GENERATED ALWAYS AS IDENTITY PRIMARY KEY,
+	town text,
+	county text,
+	supervisor text,
+	start_date date,
+	salary numeric(10,2),
+	benefits numeric(10,2)
+);
+
+COPY supervisor_salaries
+FROM '/mnt/datassd/CodeHub/SQL/CHAPTER5/supervisor_salaries.csv'
+WITH (FORMAT CSV,HEADER);
+
+-- FIXED 
+COPY supervisor_salaries (town,supervisor,salary) -- specifying columns 
+FROM '/mnt/datassd/CodeHub/SQL/CHAPTER5/supervisor_salaries.csv'
+WITH (FORMAT CSV,HEADER);
+
+select * from supervisor_salaries;
+
+DELETE FROM supervisor_salaries;
 
 
+
+COPY supervisor_salaries (town, supervisor, salary)
+FROM '/mnt/datassd/CodeHub/SQL/CHAPTER5/supervisor_salaries.csv'
+WITH (FORMAT CSV, HEADER)
+WHERE town = 'Bigville';
+
+CREATE TEMPORARY TABLE supervisor_salaries_temp
+	(LIKE )

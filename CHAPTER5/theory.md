@@ -42,7 +42,6 @@ WITH (FORMAT CSV,HEADER);
 > [!TIP]
 > `(town,supervisor,salary)` -> specifying which columns inserted
 
-
 *ADD CONDITION*
 
 ```sql
@@ -51,4 +50,18 @@ FROM '/mnt/datassd/CodeHub/SQL/CHAPTER5/supervisor_salaries.csv'
 WITH (FORMAT CSV, HEADER)
 WHERE town = 'Bigville';
 ```
+
+## Adding a Value to a Column During Import
+
+
+
+
+
+
+
+
+
+
+
+
 
