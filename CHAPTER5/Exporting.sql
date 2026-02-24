@@ -59,6 +59,8 @@ select * from supervisor_salaries;
 
 DELETE FROM supervisor_salaries;
 
+DROP TABLE supervisor_salaries;
+
 
 
 COPY supervisor_salaries (town, supervisor, salary)
@@ -67,4 +69,39 @@ WITH (FORMAT CSV, HEADER)
 WHERE town = 'Bigville';
 
 CREATE TEMPORARY TABLE supervisor_salaries_temp
-	(LIKE )
+	(LIKE supervisor_salaries INCLUDING ALL);
+-- Create Temporary table until end your database session
+-- Just copy ATTRIBUTRE
+
+SELECT * FROM supervisor_salaries_temp;
+
+
+COPY supervisor_salaries_temp (town,supervisor,salary)
+FROM '/mnt/datassd/CodeHub/SQL/CHAPTER5/supervisor_salaries.csv'
+WITH (FORMAT CSV, HEADER);
+-- IMPORT DATA
+
+SELECT * FROM supervisor_salaries_temp;
+
+DROP TABLE supervisor_salaries_temp;
+
+INSERT INTO supervisor_salaries (town, county, supervisor, salary)
+SELECT town, 'Mills', supervisor,salary
+FROM supervisor_salaries_temp;
+-- Insert the second column county is Mills
+
+COPY us_counties_pop_est_2019
+TO '/mnt/datassd/CodeHub/SQL/CHAPTER5/us_counties_export.txt'
+WITH (FORMAT CSV, HEADER, DELIMITER '|');
+
+
+
+
+
+
+
+
+
+
+
+
