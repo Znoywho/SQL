@@ -351,3 +351,6 @@ select cast(char_columns as integer) from char_data_types
 
 
 ![Test](../../assets/2026-02-15-16-17-37.png)
+
+
+
