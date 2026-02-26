@@ -31,7 +31,7 @@ WITH (FORMAT CSV,HEADER);
 > [!NOTE]
 > B/c is the auto-incrementing `id` but my own csv file begins with the text column `town`
 
-> [!FIX]
+> [!DONE]
 > ```sql
 > COPY supervisor_salaries (town,supervisor,salary)
 > FROM '/mnt/datassd/CodeHub/SQL/CHAPTER5/supervisor_salaries.csv'
@@ -42,7 +42,7 @@ WITH (FORMAT CSV,HEADER);
 > [!TIP]
 > `(town,supervisor,salary)` -> specifying which columns inserted
 
-*ADD CONDITION*
+*Add CONDITION*
 
 ```sql
 COPY supervisor_salaries (town, supervisor, salary)

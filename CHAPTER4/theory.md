@@ -1,4 +1,4 @@
-# ***Data Types***
+# Data Types
 
 
 ## Characters
@@ -40,11 +40,9 @@ create table people(
 id serial,
 perona_name varchar(100)
 );
-
 ```
 > [!TIP]
-> ***Auto-Incrementing*** 
-# ***Data Types***
+> Auto-Incrementing 
 
 
 ## Characters
@@ -89,7 +87,7 @@ perona_name varchar(100)
 
 ```
 > [!TIP]
-> ***Auto-Incrementing*** 
+> Auto-Incrementing
 > ```sql
 > -- Auto incrementinng with IDENTITY
 > -- Set whole system 
@@ -134,6 +132,7 @@ create table date_time_types(
 	interval_column interval
 );
 ```
+
 > [!NOTE]
 > ***time zone***  : specifying the organization 
 
@@ -196,7 +195,7 @@ select cast(char_columns as integer) from char_data_types
 
 
 ## Excercise 
-# ***Data Types***
+## Data Types
 
 
 ## Characters
@@ -345,12 +344,8 @@ select cast(char_columns as integer) from char_data_types
 > from date_time_types;
 > ```
 
-
 ## Excercise 
 ![Excercise](../assets/excercise.png)
 
 
-![Test](../../assets/2026-02-15-16-17-37.png)
-
-
-
+ 
