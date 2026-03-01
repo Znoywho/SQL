@@ -1,10 +1,12 @@
 # IMPORTING AND EXPORTING DATA
 ## Using COPY to Import DATA
+
 ```sql
 COPY table_name
 FROM 'C:\YourDirectory\your_file.csv'
 WITH (FORMAT CSV, HEADER);
 ```
+
 ### Input and Output file format
 
 - `FORMAT format_name`: specify type of file (CSV/TEXT/BINARY)
@@ -42,7 +44,7 @@ WITH (FORMAT CSV,HEADER);
 > [!TIP]
 > `(town,supervisor,salary)` -> specifying which columns inserted
 
-*Add CONDITION*
+***Add CONDITION***
 
 ```sql
 COPY supervisor_salaries (town, supervisor, salary)

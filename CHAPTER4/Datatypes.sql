@@ -16,12 +16,12 @@ create table char_data_types(
 );
 
 insert into char_data_types
-values 
+VALUES
 	('hao','hao','hao'),
 	('depzai','depzai','depzai');
 -- export data to file text
 copy char_data_types to 'D:\begin\SQL\CHAPTER4/typetest.txt'
-with (FORMAT CSV, header, delimiter '|')
+with (FORMAT CSV, header, delimiter '|');
 
 create table people(
 	id serial,

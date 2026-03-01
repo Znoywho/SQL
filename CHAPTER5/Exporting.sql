@@ -67,4 +67,25 @@ WITH (FORMAT CSV, HEADER)
 WHERE town = 'Bigville';
 
 CREATE TEMPORARY TABLE supervisor_salaries_temp
-	(LIKE )
+	(LIKE supervisor_salaries INCLUDING ALL);
+-- Create Temporary table en
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
